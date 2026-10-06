@@ -38,7 +38,7 @@ export const ThemeToggle = ({ className }: { className?: string }) => {
             aria-label={label}
             title={label}
             className={cn(
-                "flex size-10 items-center justify-center rounded-full border border-border bg-card text-foreground transition hover:opacity-80",
+                "flex size-10 shadow-inner items-center justify-center rounded-full border border-border bg-card text-foreground transition hover:opacity-80",
                 className,
             )}
         >

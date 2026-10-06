@@ -51,6 +51,7 @@
   --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);
   --font-poppins: var(--font-poppins);
+  --font-fuzzy: var(--font-fuzzy);
   --font-heading: var(--font-sans);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -87,6 +88,24 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+  --animate-marquee: marquee var(--duration) infinite linear;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  @keyframes marquee-vertical {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
 }
 
 .dark {
@@ -100,7 +119,7 @@
   --popover-foreground: oklch(0.985 0 0);
   --primary: oklch(0.58 0.18 28.044);
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.52 0.15 29.234);
+  --secondary: oklch(0.245 0.065 29.234);
   --secondary-foreground: oklch(0.985 0 0);
   --tertiary: oklch(0.68 0.04 131.616);
   --tertiary-foreground: oklch(0.145 0 0);

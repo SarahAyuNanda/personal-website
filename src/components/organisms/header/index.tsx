@@ -22,25 +22,11 @@ export const Header = () => {
     }, [])
 
     return (
-        <header className={cn("fixed inset-x-0 top-0 z-40 bg-transparent py-4", {
+        <header className={cn("fixed inset-x-0 top-0 mx-auto z-40 bg-transparent py-4 max-w-7xl", {
             "backdrop-blur-sm bg-background/70 transition-all duration-150": scrolled,
         })}>
             <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-3 px-5 md:px-8">
-                <p className="text-sm font-semibold tracking-tight">Sarah Ayu Nanda</p>
-                <nav className="flex items-center gap-4 text-sm text-muted md:gap-6">
-                    <a href="#home" className="transition-colors hover:text-foreground">
-                        Home
-                    </a>
-                    <a href="#projects" className="transition-colors hover:text-foreground">
-                        Projects
-                    </a>
-                    <a href="#experience" className="transition-colors hover:text-foreground">
-                        Experience
-                    </a>
-                    <a href="#contact" className="transition-colors hover:text-foreground">
-                        Contact
-                    </a>
-                </nav>
+                <p className="text-base font-bold tracking-tight font-fuzzy">Sarah Ayu Nanda</p>
                 <Suspense fallback={null}>
                     <ThemeToggle />
                 </Suspense>

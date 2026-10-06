@@ -13,7 +13,7 @@ export const PrimaryButton = ({
     <Button
       variant="default"
       className={cn(
-        "bg-brand-primary hover:bg-brand-primary-accent flex items-center justify-center gap-2 rounded text-white",
+        "bg-primary flex items-center justify-center gap-2 rounded-full shadow-inner text-white px-6 py-3 h-max transition-all duration-150 ease-in-out",
         className
       )}
       {...props}

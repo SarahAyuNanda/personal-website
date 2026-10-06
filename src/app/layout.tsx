@@ -1,7 +1,8 @@
 import { RootTemplate } from "@/components/templates";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Poppins } from "next/font/google";
+import { Fuzzy_Bubbles, Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
+import { database } from "@/lib/data";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,10 +21,16 @@ const poppins = Poppins({
   variable: "--font-poppins",
 })
 
+const fuzzy = Fuzzy_Bubbles({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "700"],
+  variable: "--font-fuzzy",
+})
+
 export const metadata: Metadata = {
-  title: "Sarah Ayu Nanda | Portfolio",
-  description:
-    "",
+  title: database.name,
+  description: database.headline,
 };
 
 if (typeof window !== "undefined") {
@@ -48,7 +55,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} h-full w-full font-poppins antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${fuzzy.variable} h-full w-full font-poppins antialiased`}
       suppressHydrationWarning
     >
       <body>
