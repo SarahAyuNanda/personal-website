@@ -1,4 +1,5 @@
 import { PrimaryButton, SkillBadge, TertiaryButton } from "@/components/atoms";
+import { Social } from "@/components/molecules";
 import { Marquee } from "@/components/ui/marquee";
 import { database } from "@/lib/data";
 import { Mail, Paperclip } from "lucide-react";
@@ -30,7 +31,8 @@ export const Hero = () => {
                 <p className="text-base max-w-5xl leading-7 md:text-lg text-center">
                     With 5+ years of experience, I enjoy turning complex ideas and requirements into clean, intuitive interfaces while keeping the codebase structured, maintainable, and built to grow.
                 </p>
-                <div className="flex flex-wrap items-center justify-center gap-3">
+                <Social />
+                <div className="flex flex-wrap items-center justify-center gap-3 mt-4">
                     <PrimaryButton className="group">
                         Connect with me
                         <Mail className="group-hover:animate-wiggle-more" />
@@ -44,7 +46,7 @@ export const Hero = () => {
             <div className="absolute inset-x-0 w-full bottom-0 overflow-hidden bg-accent/40">
                 <Marquee pauseOnHover className="[--duration:60s]">
                     {database.skills.map((skill) => (
-                        <SkillBadge key={skill} skill={skill} />
+                        <SkillBadge key={skill.label} skill={skill.label} icon={skill.icon} />
                     ))}
                 </Marquee>
                 <div className="from-background pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-linear-to-r"></div>
