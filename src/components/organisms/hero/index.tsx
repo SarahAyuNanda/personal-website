@@ -1,7 +1,7 @@
 import { PrimaryButton, SkillBadge, TertiaryButton } from "@/components/atoms";
 import { Marquee } from "@/components/ui/marquee";
 import { database } from "@/lib/data";
-import { ArrowRight, Paperclip } from "lucide-react";
+import { Mail, Paperclip } from "lucide-react";
 
 export const Hero = () => {
     return (
@@ -28,11 +28,12 @@ export const Hero = () => {
                     </span>
                 </h1>
                 <p className="text-base max-w-5xl leading-7 md:text-lg text-center">
-                    With 5+ years of experience, I enjoy turning complex ideas into clean, intuitive, and maintainable web experiences.</p>
+                    With 5+ years of experience, I enjoy turning complex ideas and requirements into clean, intuitive interfaces while keeping the codebase structured, maintainable, and built to grow.
+                </p>
                 <div className="flex flex-wrap items-center justify-center gap-3">
                     <PrimaryButton className="group">
                         Connect with me
-                        <ArrowRight className="group-hover:animate-wiggle-more -rotate-45" />
+                        <Mail className="group-hover:animate-wiggle-more" />
                     </PrimaryButton>
                     <TertiaryButton className="group">
                         Preview CV
@@ -40,8 +41,8 @@ export const Hero = () => {
                     </TertiaryButton>
                 </div>
             </div>
-            <div className="absolute inset-x-0 bottom-8 w-full overflow-hidden">
-                <Marquee pauseOnHover>
+            <div className="absolute inset-x-0 w-full bottom-0 overflow-hidden bg-accent/40">
+                <Marquee pauseOnHover className="[--duration:60s]">
                     {database.skills.map((skill) => (
                         <SkillBadge key={skill} skill={skill} />
                     ))}
