@@ -43,7 +43,7 @@ export const Hero = () => {
                     </TertiaryButton>
                 </div>
             </div>
-            <div className="absolute inset-x-0 w-full bottom-0 overflow-hidden bg-accent/40">
+            <div className="absolute inset-x-0 w-full bottom-0 overflow-hidden bg-accent/50">
                 <Marquee pauseOnHover className="[--duration:60s]">
                     {database.skills.map((skill) => (
                         <SkillBadge key={skill.label} skill={skill.label} icon={skill.icon} />

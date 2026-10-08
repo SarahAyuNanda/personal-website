@@ -13,7 +13,7 @@ export const SkillBadge = ({
   return (
     <div
       className={cn(
-        "flex justify-center items-center gap-2 px-4 py-3 text-sm font-medium text-foreground min-w-32",
+        "flex justify-center items-center gap-2 px-4 py-3 text-sm font-medium text-foreground",
         className
       )}
     >

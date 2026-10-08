@@ -7,6 +7,7 @@ import { WhatsappIcon } from "@/components/ui/svgs/whatsappIcon";
 import {
   siAndroidstudio,
   siAntdesign,
+  siBehance,
   siBootstrap,
   siClaude,
   siDocker,
@@ -57,6 +58,11 @@ export const database = {
       id: "medium",
       url: "https://medium.com/@sarah.bugdeveloper",
       icon: siMedium,
+    },
+    {
+      id: "behance",
+      url: "https://www.behance.net/sarahayunanda",
+      icon: siBehance,
     },
   ],
   skills: [

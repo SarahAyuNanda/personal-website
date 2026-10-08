@@ -5,7 +5,7 @@ export default function MainPage() {
         <div className="relative w-full min-h-screen bg-background bg-[radial-gradient(circle,rgba(71,85,105,0.14)_0.9px,transparent_1.5px)] bg-size-[20px_20px] dark:bg-[radial-gradient(circle,rgba(148,163,184,0.12)_0.9px,transparent_1.5px)]">
             <Header />
 
-            <main className="mx-auto flex w-full flex-col gap-4 px-5 md:px-8">
+            <main className="mx-auto flex w-full flex-col gap-4">
                 <Hero />
             </main>
         </div>
