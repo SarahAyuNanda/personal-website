@@ -29,8 +29,30 @@ const fuzzy = Fuzzy_Bubbles({
 })
 
 export const metadata: Metadata = {
-  title: database.name,
+  title: `${database.name} | Personal Website`,
   description: database.headline,
+  openGraph: {
+    title: database.name,
+    description: database.headline,
+    url: database.website,
+    siteName: 'Personal Website',
+    images: [
+      {
+        url: 'public/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: database.name,
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `${database.name} | Personal Website`,
+    description: database.headline,
+    images: ['public/og-image.png'],
+  },
 };
 
 if (typeof window !== "undefined") {

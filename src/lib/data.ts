@@ -38,6 +38,7 @@ export const database = {
   location: "Yogyakarta, Indonesia",
   email: "nanda.sarahayu@gmail.com",
   phone: "+62 813-2848-4322",
+  website: "https://sarahayunanda.vercel.app/",
   profiles: [
     {
       id: "whatsapp",
