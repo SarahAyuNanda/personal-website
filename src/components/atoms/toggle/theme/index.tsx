@@ -41,19 +41,21 @@ export const ThemeToggle = ({ className }: { className?: string }) => {
 
     return (
         <Tooltip>
-            <TooltipTrigger>
-                <AnimatedThemeToggler
-                    theme={resolvedTheme === "dark" ? "dark" : "light"}
-                    onThemeChange={onHandleCycleTheme}
-                    disabled={!mounted}
-                    aria-label={label}
-                    icon={mounted ? <Icon className="size-5" aria-hidden /> : null}
-                    className={cn(
-                        "flex size-10 shadow-inner items-center justify-center rounded-full border border-border bg-card text-foreground transition hover:opacity-80",
-                        className,
-                    )}
-                />
-            </TooltipTrigger>
+            <TooltipTrigger
+                render={
+                    <AnimatedThemeToggler
+                        theme={resolvedTheme === "dark" ? "dark" : "light"}
+                        onThemeChange={onHandleCycleTheme}
+                        disabled={!mounted}
+                        aria-label={label}
+                        icon={mounted ? <Icon className="size-5" aria-hidden /> : null}
+                        className={cn(
+                            "flex size-10 shadow-inner items-center justify-center rounded-full border border-border bg-card text-foreground transition hover:opacity-80",
+                            className,
+                        )}
+                    />
+                }
+            />
             <TooltipContent side="bottom" className="text-center">
                 <p className="text-sm">{label}</p>
             </TooltipContent>

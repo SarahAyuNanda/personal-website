@@ -2,7 +2,7 @@
 
 import { ThemeToggle } from "@/components/atoms"
 import { cn } from "@/lib/utils"
-import { Suspense, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 
 export const Header = () => {
     const [scrolled, setScrolled] = useState(false)
@@ -27,9 +27,7 @@ export const Header = () => {
         })}>
             <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-3 px-5 md:px-8">
                 <p className="text-base font-bold tracking-tight font-fuzzy">Sarah Ayu Nanda</p>
-                <Suspense fallback={null}>
-                    <ThemeToggle />
-                </Suspense>
+                <ThemeToggle />
             </div>
         </header>
     )

@@ -15,7 +15,7 @@ export type TransitionVariant =
   | "rectangle"
   | "star"
 
-interface AnimatedThemeTogglerProps extends React.ComponentPropsWithoutRef<"button"> {
+interface AnimatedThemeTogglerProps extends React.ComponentProps<"button"> {
   duration?: number
   variant?: TransitionVariant
   /** When true, the transition expands from the viewport center instead of the button center. */
@@ -160,6 +160,8 @@ export const AnimatedThemeToggler = ({
   theme,
   onThemeChange,
   icon,
+  onClick,
+  ref,
   ...props
 }: AnimatedThemeTogglerProps) => {
   const shape = variant ?? "circle"
@@ -167,6 +169,14 @@ export const AnimatedThemeToggler = ({
   const [internalIsDark, setInternalIsDark] = useState(false)
   const isDark = isControlled ? theme === "dark" : internalIsDark
   const buttonRef = useRef<HTMLButtonElement>(null)
+  const setButtonRef = useCallback(
+    (node: HTMLButtonElement | null) => {
+      buttonRef.current = node
+      if (typeof ref === "function") ref(node)
+      else if (ref) ref.current = node
+    },
+    [ref]
+  )
   const isTransitioningRef = useRef(false)
   const activeAnimRef = useRef<Animation | null>(null)
 
@@ -323,10 +333,13 @@ export const AnimatedThemeToggler = ({
   return (
     <button
       type="button"
-      ref={buttonRef}
-      onClick={toggleTheme}
-      className={cn(className)}
       {...props}
+      ref={setButtonRef}
+      onClick={(event) => {
+        onClick?.(event)
+        if (!event.defaultPrevented) toggleTheme()
+      }}
+      className={cn(className)}
     >
       {icon ?? (isDark ? <Sun /> : <Moon />)}
       <span className="sr-only">Toggle theme</span>
