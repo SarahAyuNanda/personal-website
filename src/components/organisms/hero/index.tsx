@@ -20,6 +20,7 @@ export const Hero = () => {
                     className="text-4xl font-semibold leading-tight text-center tracking-tight md:text-6xl"
                 >
                     Hey, I&apos;m&nbsp;
+                    <br className="block lg:hidden" />
                     <span className="text-primary text-7xl font-fuzzy">
                         {database.name}
                     </span>
