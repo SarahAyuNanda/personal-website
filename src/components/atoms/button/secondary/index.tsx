@@ -13,7 +13,7 @@ export const SecondaryButton = ({
     <Button
       variant="secondary"
       className={cn(
-        "bg-brand-secondary hover:bg-brand-secondary-accent flex items-center justify-center gap-2 rounded text-white",
+        "bg-tertiary hover:bg-tertiary/80 flex items-center justify-center gap-2 rounded-full shadow-inner text-white px-6 py-3 h-max transition-all duration-150 ease-in-out hover:translate-y-px",
         className
       )}
       {...props}

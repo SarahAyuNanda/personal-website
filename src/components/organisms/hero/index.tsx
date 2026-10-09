@@ -2,7 +2,7 @@ import { PrimaryButton, SkillBadge, TertiaryButton } from "@/components/atoms";
 import { Social } from "@/components/molecules";
 import { Marquee } from "@/components/ui/marquee";
 import { database } from "@/lib/data";
-import { Mail, Paperclip } from "lucide-react";
+import { Download, Mail } from "lucide-react";
 
 export const Hero = () => {
     return (
@@ -35,12 +35,12 @@ export const Hero = () => {
                 <Social />
                 <div className="flex flex-wrap items-center justify-center gap-3 mt-4">
                     <PrimaryButton className="group">
-                        Connect with me
+                        Let&apos;s talk
                         <Mail className="group-hover:animate-wiggle-more" />
                     </PrimaryButton>
                     <TertiaryButton className="group">
-                        Preview CV
-                        <Paperclip className="group-hover:animate-wiggle-more" />
+                        Get my resume
+                        <Download className="group-hover:animate-wiggle-more" />
                     </TertiaryButton>
                 </div>
             </div>
