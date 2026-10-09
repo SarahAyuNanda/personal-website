@@ -24,14 +24,14 @@ export class ErrorBoundaryPage extends Component<Props, State> {
     if (this.state.error) {
       return (
         <section className="font-poppins flex min-h-dvh flex-col items-center justify-center bg-gray-50 p-4">
-          <div className="w-full max-w-xl min-w-lg rounded-md bg-white p-8 shadow-lg">
+          <div className="w-full max-w-xl min-w-lg rounded-md bg-white p-8 border border-gray-100">
             <div className="flex flex-col items-center gap-4">
-              <div className="bg-brand-primary/10 rounded-full p-4">
-                <Ban className="text-brand-primary size-8" />
+              <div className="bg-primary/10 rounded-full p-4">
+                <Ban className="text-primary size-8" />
               </div>
 
               <div className="text-center">
-                <h1 className="mb-2 text-xl font-semibold text-gray-900">
+                <h1 className="mb-2 text-xl font-semibold text-primary">
                   An Error Occurred
                 </h1>
                 <p className="mb-4 text-gray-600">
@@ -43,7 +43,7 @@ export class ErrorBoundaryPage extends Component<Props, State> {
                   <span className="flex justify-center">
                     <Link
                       href="mailto:nanda.sarahayu@gmail.com"
-                      className="text-brand-primary hover:text-brand-primary/90 after:bg-brand-primary/90 relative flex w-max items-center justify-center gap-2 text-sm font-medium transition-all duration-150 after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:transition-all after:duration-150 hover:after:w-full"
+                      className="text-primary hover:text-primary/90 after:bg-primary/90 relative flex w-max items-center justify-center gap-2 text-sm font-medium transition-all duration-150 after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:transition-all after:duration-150 hover:after:w-full"
                     >
                       nanda.sarahayu@gmail.com
                     </Link>
