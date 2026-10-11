@@ -5,84 +5,84 @@ import "./globals.css";
 import { database } from "@/lib/data";
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+    variable: "--font-geist-sans",
+    subsets: ["latin"],
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+    variable: "--font-geist-mono",
+    subsets: ["latin"],
 });
 
 const poppins = Poppins({
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-poppins",
-})
+    subsets: ["latin"],
+    display: "swap",
+    weight: ["400", "500", "600", "700"],
+    variable: "--font-poppins",
+});
 
 const fuzzy = Fuzzy_Bubbles({
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["400", "700"],
-  variable: "--font-fuzzy",
-})
+    subsets: ["latin"],
+    display: "swap",
+    weight: ["400", "700"],
+    variable: "--font-fuzzy",
+});
 
 export const metadata: Metadata = {
-  title: database.name,
-  description: database.headline,
-  openGraph: {
     title: database.name,
     description: database.headline,
-    url: database.website,
-    siteName: 'Personal Website',
-    images: [
-      {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: database.name,
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: `${database.name} | Personal Website`,
-    description: database.headline,
-    images: ['/og-image.png'],
-  },
+    openGraph: {
+        title: database.name,
+        description: database.headline,
+        url: database.website,
+        siteName: "Personal Website",
+        images: [
+            {
+                url: "/og-image.png",
+                width: 1200,
+                height: 630,
+                alt: database.name,
+            },
+        ],
+        locale: "en_US",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: `${database.name} | Personal Website`,
+        description: database.headline,
+        images: ["/og-image.png"],
+    },
 };
 
 if (typeof window !== "undefined") {
-  if (typeof window !== "undefined") {
-    window.addEventListener("unhandledrejection", (event) => {
-      console.error("Unhandled promise rejection:", event.reason);
-      event.preventDefault();
-    });
+    if (typeof window !== "undefined") {
+        window.addEventListener("unhandledrejection", (event) => {
+            console.error("Unhandled promise rejection:", event.reason);
+            event.preventDefault();
+        });
 
-    window.addEventListener("error", (event) => {
-      console.error("Global error handler:", event);
-      event.preventDefault();
-    });
-  }
+        window.addEventListener("error", (event) => {
+            console.error("Global error handler:", event);
+            event.preventDefault();
+        });
+    }
 }
 
 export default function RootLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode;
+    children: React.ReactNode;
 }>) {
-  return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${fuzzy.variable} h-full w-full font-poppins antialiased`}
-      suppressHydrationWarning
-    >
-      <body>
-        <RootTemplate>{children}</RootTemplate>
-      </body>
-    </html>
-  );
+    return (
+        <html
+            lang="en"
+            className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${fuzzy.variable} font-poppins h-full w-full antialiased`}
+            suppressHydrationWarning
+        >
+            <body>
+                <RootTemplate>{children}</RootTemplate>
+            </body>
+        </html>
+    );
 }
