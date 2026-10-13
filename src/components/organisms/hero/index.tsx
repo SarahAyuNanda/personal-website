@@ -35,7 +35,7 @@ export const Hero = () => {
                     grow.
                 </p>
                 <Social />
-                <div className="mt-4 flex flex-col items-center justify-center gap-3 md:flex-row">
+                <div className="mt-4 flex flex-col items-center justify-center gap-3 sm:flex-row">
                     <ContactForm />
                     <PDFDownloadLink
                         document={<Resume resume={database} />}
