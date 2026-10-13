@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Fuzzy_Bubbles, Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
 import { database } from "@/lib/data";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -82,6 +83,7 @@ export default function RootLayout({
         >
             <body>
                 <RootTemplate>{children}</RootTemplate>
+                <Analytics />
             </body>
         </html>
     );
