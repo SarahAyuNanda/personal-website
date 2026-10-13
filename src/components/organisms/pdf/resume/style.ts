@@ -42,7 +42,7 @@ export const resumeStyle = StyleSheet.create({
     },
     pageNumber: {
         position: "absolute",
-        fontSize: 12,
+        fontSize: 11,
         bottom: 24,
         left: 0,
         right: 35,

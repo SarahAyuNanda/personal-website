@@ -7,6 +7,7 @@ import {
     Profile,
     ProfileList,
 } from "@/components/organisms/pdf/resume/profile";
+import { Project } from "@/components/organisms/pdf/resume/project";
 import { Section } from "@/components/organisms/pdf/resume/section";
 import { Skill } from "@/components/organisms/pdf/resume/skill";
 import { resumeStyle as style } from "@/components/organisms/pdf/resume/style";
@@ -76,17 +77,28 @@ export const Resume = ({ resume }: ResumeProps) => {
                         <Skill key={s.name} {...s} />
                     ))}
                 </Section>
-                <Section title="professional experience" compact>
+                <Section title="professional experiences" compact>
                     {resume.works.map((w) => (
                         <Work key={w.company} {...w} />
                     ))}
                 </Section>
-                <Section title="project" compact></Section>
-                <Section title="education" compact break>
+                <Section title="projects" compact break>
+                    {resume.projects.map((p) => (
+                        <Project key={p.title} {...p} />
+                    ))}
+                </Section>
+                <Section title="education" compact>
                     {resume.educations.map((e) => (
                         <Education key={e.institution} {...e} />
                     ))}
                 </Section>
+                <Text
+                    fixed
+                    style={style.pageNumber}
+                    render={({ pageNumber, totalPages }) =>
+                        `${pageNumber} / ${totalPages}`
+                    }
+                />
             </Page>
         </Document>
     );

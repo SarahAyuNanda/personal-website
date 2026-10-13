@@ -378,12 +378,13 @@ export const database = {
                 "Shadcn UI",
                 "TanStack Query",
             ],
-            link: "https://siniktala.lan.go.id/",
+            // link: "https://siniktala.lan.go.id/",
+            link: "https://siniktaladev.lan.go.id/",
         },
         {
             title: "JDIH LAN RI",
             period: "2025",
-            status: "published",
+            status: "live",
             summary:
                 "A legal information and documentation portal that provides access to LAN RI's legal regulations, institutional legal documents, and other legal resources related to public administration.",
             stack: [
@@ -399,7 +400,7 @@ export const database = {
         {
             title: "PPID LAN RI",
             period: "2024",
-            status: "published",
+            status: "live",
             summary:
                 "A public information disclosure portal that helps citizens access institutional information and official public documents from LAN RI, supporting transparency and access to government information.",
             stack: [
@@ -413,9 +414,9 @@ export const database = {
             link: "https://ppid.lan.go.id/",
         },
         {
-            title: "LAN RI Website",
+            title: "LAN RI",
             period: "2024",
-            status: "published",
+            status: "live",
             summary:
                 "The official institutional website of LAN RI, presenting organizational information, news, publications, research, public services, and resources related to public administration and civil servant development.",
             stack: [
@@ -431,9 +432,9 @@ export const database = {
         {
             title: "SMART",
             period: "2025",
-            status: "published",
+            status: "live",
             summary:
-                "A financial management platform for micro, small, and medium-sized enterprises (MSMEs) that helps business owners organize budgets, track expenses, and generate financial reports for better financial visibility and decision-making.",
+                "A financial management platform for micro, small, and medium-sized enterprises (MSMEs) that helps business owners organize budgets, track expenses, and visualize financial reports for better financial visibility and decision-making.",
             stack: [
                 "Next.js",
                 "TypeScript",
