@@ -23,7 +23,7 @@ export const Header = () => {
     return (
         <header
             className={cn(
-                "inset-x-0 top-0 z-40 mx-auto hidden w-full bg-transparent py-4 md:fixed md:flex",
+                "inset-x-0 top-0 z-40 mx-auto flex w-full bg-transparent py-4 md:fixed",
                 {
                     "bg-background/70 backdrop-blur-sm transition-all duration-150":
                         scrolled,
