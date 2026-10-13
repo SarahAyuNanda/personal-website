@@ -7,6 +7,7 @@ import { PDFDownloadLink } from "@/components/organisms/pdf";
 import { Resume } from "@/components/organisms/pdf/resume";
 import { Marquee } from "@/components/ui/marquee";
 import { database } from "@/lib/data";
+import { yearsSinceStart } from "@/lib/date";
 import { Download, Loader } from "lucide-react";
 
 export const Hero = () => {
@@ -29,10 +30,10 @@ export const Hero = () => {
                     <span className="text-foreground">{database.role}</span>
                 </h1>
                 <p className="max-w-5xl text-center text-sm leading-7 md:text-lg">
-                    With 5+ years of experience, I enjoy turning complex ideas
-                    and requirements into clean, intuitive interfaces while
-                    keeping the codebase structured, maintainable, and built to
-                    grow.
+                    With {yearsSinceStart()}+ years of experience, I enjoy
+                    turning complex ideas and requirements into clean, intuitive
+                    interfaces while keeping the codebase structured,
+                    maintainable, and built to grow.
                 </p>
                 <Social />
                 <div className="mt-4 flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -47,7 +48,7 @@ export const Hero = () => {
                                 className="group"
                                 disabled={loading}
                             >
-                                {loading ? "Downloading..." : "Get My Resume"}
+                                {loading ? "Waiting..." : "Get My Resume"}
                                 {loading ? (
                                     <Loader className="animate-spin" />
                                 ) : (
