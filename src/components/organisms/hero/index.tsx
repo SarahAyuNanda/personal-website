@@ -1,9 +1,13 @@
-import { SkillBadge, TertiaryButton } from "@/components/atoms";
-import { Social } from "@/components/molecules";
+"use client";
+
+import { TertiaryButton } from "@/components/atoms";
+import { Social, Stack } from "@/components/molecules";
 import { ContactForm } from "@/components/organisms/form/contact";
+import { PDFDownloadLink } from "@/components/organisms/pdf";
+import { Resume } from "@/components/organisms/pdf/resume";
 import { Marquee } from "@/components/ui/marquee";
 import { database } from "@/lib/data";
-import { Download } from "lucide-react";
+import { Download, Loader } from "lucide-react";
 
 export const Hero = () => {
     return (
@@ -33,19 +37,34 @@ export const Hero = () => {
                 <Social />
                 <div className="mt-4 flex flex-col items-center justify-center gap-3 md:flex-row">
                     <ContactForm />
-                    <TertiaryButton className="group">
-                        Get My Resume
-                        <Download className="group-hover:animate-wiggle-more" />
-                    </TertiaryButton>
+                    <PDFDownloadLink
+                        document={<Resume resume={database} />}
+                        fileName="sarahayunanda-ats-resume.pdf"
+                        className="flex-1 sm:flex-none"
+                    >
+                        {({ loading }) => (
+                            <TertiaryButton
+                                className="group"
+                                disabled={loading}
+                            >
+                                {loading ? "Downloading..." : "Get My Resume"}
+                                {loading ? (
+                                    <Loader className="animate-spin" />
+                                ) : (
+                                    <Download className="group-hover:animate-wiggle-more" />
+                                )}
+                            </TertiaryButton>
+                        )}
+                    </PDFDownloadLink>
                 </div>
             </div>
             <div className="bg-accent/50 relative flex w-full px-0 md:absolute md:inset-x-0 md:bottom-0 md:overflow-hidden">
                 <Marquee pauseOnHover className="[--duration:60s]">
-                    {database.skills.map((skill) => (
-                        <SkillBadge
-                            key={skill.label}
-                            skill={skill.label}
-                            icon={skill.icon}
+                    {database["tech-stacks"].map((stack) => (
+                        <Stack
+                            key={stack.label}
+                            stack={stack.label}
+                            icon={stack.icon}
                         />
                     ))}
                 </Marquee>

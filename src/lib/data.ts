@@ -4,6 +4,7 @@ import { Motion } from "@/components/ui/svgs/motion";
 import { Openai } from "@/components/ui/svgs/openai";
 import { TanstackLight } from "@/components/ui/svgs/tanstackLight";
 import { WhatsappIcon } from "@/components/ui/svgs/whatsappIcon";
+import { yearsSinceStart } from "@/lib/date";
 import {
     siAndroidstudio,
     siAntdesign,
@@ -33,9 +34,9 @@ import {
 
 export const database = {
     name: "Sarah Ayu Nanda",
-    role: "Frontend Developer",
-    headline: "Frontend Developer building thoughtful web products",
-    bio: "Front-End Developer with 5+ years of experience delivering digital products across banking, HR management systems, government administration platforms, and public-facing landing pages. Experienced in translating complex, domain-specific workflows into intuitive interfaces that improve operational efficiency, information accessibility, and stakeholder usability. Known for a product-first mindset, fast execution, and the ability to collaborate effectively with cross-functional teams. Passionate about building solutions that are not only functional and maintainable, but also impactful for real-world users.",
+    role: "Front-End Developer",
+    headline: "Front-End Developer building thoughtful web products",
+    bio: `Front-End Developer with ${yearsSinceStart()}+ years of experience delivering digital products across banking, HR management systems, government administration platforms, and public-facing landing pages. Experienced in translating complex, domain-specific workflows into intuitive interfaces that improve operational efficiency, information accessibility, and stakeholder usability. Known for a product-first mindset, fast execution, and the ability to collaborate effectively with cross-functional teams. Passionate about building solutions that are not only functional and maintainable, but also impactful for real-world users.`,
     location: "Yogyakarta, Indonesia",
     email: "nanda.sarahayu@gmail.com",
     phone: "+62 813-2848-4322",
@@ -43,31 +44,36 @@ export const database = {
     profiles: [
         {
             id: "whatsapp",
+            network: "Whatsapp",
             url: "https://wa.me/6281328484322",
             icon: WhatsappIcon,
         },
         {
             id: "linkedin",
+            network: "Linkedin",
             url: "https://www.linkedin.com/in/sarahayunanda/",
             icon: Linkedin,
         },
         {
             id: "github",
+            network: "Github",
             url: "https://github.com/SarahAyuNanda",
             icon: GithubLight,
         },
         {
             id: "medium",
+            network: "Medium",
             url: "https://medium.com/@sarah.bugdeveloper",
             icon: siMedium,
         },
         {
             id: "behance",
+            network: "Behance",
             url: "https://www.behance.net/sarahayunanda",
             icon: siBehance,
         },
     ],
-    skills: [
+    "tech-stacks": [
         {
             label: "Git",
             icon: siGit,
@@ -177,11 +183,80 @@ export const database = {
             icon: siClaude,
         },
     ],
+    skills: [
+        {
+            name: "Programming Languages",
+            keywords: [
+                "TypeScript",
+                "JavaScript",
+                "Go (Golang)",
+                "Python",
+                "Java",
+                "Kotlin",
+            ],
+        },
+        {
+            name: "Frontend Technologies",
+            keywords: [
+                "React",
+                "React Native",
+                "Vue",
+                "Next.js",
+                "Nuxt.js",
+                "Bootstrap",
+                "Material UI",
+                "Tailwind CSS",
+                "Shadcn UI",
+                "Nuxt UI",
+                "Redux Toolkit",
+                "Zustand",
+                "React Router",
+                "Tanstack Query",
+            ],
+        },
+        {
+            name: "Backend & Databases",
+            keywords: ["REST APIs", "PostgreSQL", "MySQL", "Strapi CMS"],
+        },
+        {
+            name: "DevOps & Tools",
+            keywords: [
+                "Docker",
+                "GCP (Google Cloud Platform)",
+                "CI/CD",
+                "Github Actions",
+                "Git",
+                "Redis",
+                "Linux",
+                "Cloudfare",
+            ],
+        },
+        // {
+        //     name: "Professional Skills",
+        //     keywords: [
+        //         "Cross-functional team collaboration",
+        //         "Effective technical communication",
+        //         "Proactive mentorship and knowledge sharing",
+        //         "Agile and scrum participation",
+        //         "Continuous and adaptive learning",
+        //     ],
+        // },
+        // {
+        //     name: "Core Competencies",
+        //     keywords: [
+        //         "Cross-team alignment and communication",
+        //         "User-centric design empathy",
+        //         "Technical leadership and mentorship",
+        //         "Problem-solving and root-cause analysis",
+        //         "Strategic task prioritization",
+        //     ],
+        // },
+    ],
     works: [
         {
-            role: "Frontend Developer",
+            role: "Front-End Developer",
             company: "Self-Employed",
-            location: null,
+            location: "Yogyakarta, Indonesia",
             workType: "Remote",
             employmentType: "Freelance",
             startDate: "2024-08",
@@ -200,11 +275,11 @@ export const database = {
                 "Successfully delivered production-grade platforms used by government officers and public-facing roles. Improved content publishing workflows through centralized CMS integration, reducing manual updates and deployment overhead.",
                 "Enhanced user experience and reliability through optimized data interaction and state management strategies.",
                 "Reduced development time by introducing reusable components, design consistency, and frontend standards.",
-                "Contributed to the development of LAN’s public information platforms, supporting LAN in achieving a Top 5 national ranking with a 98.49 evaluation score and informative qualification at the 2025 KIP Awards.",
+                "Contributed to the development of LAN’s public information platforms, supporting LAN in achieving a <strong>Top 5 national ranking</strong> with a <strong>98.49 evaluation score</strong> and informative qualification at the <strong>2025 KIP Awards</strong>.",
             ],
         },
         {
-            role: "Front End Developer",
+            role: "Front-End Developer",
             company: "PT Kencana Enterprise Global Projects",
             location: "Jakarta, Indonesia",
             workType: "Remote",
@@ -288,11 +363,11 @@ export const database = {
     ],
     projects: [
         {
-            title: "LAN Government Platforms",
-            company: "Self-Employed",
-            period: "2024 – 2026",
+            title: "Siniktala LAN RI",
+            period: "2025",
+            status: "under-maintenance",
             summary:
-                "Government-facing web applications for LAN, PPID LAN, JDIH LAN, and Siniktala LAN, powered by a centralized Strapi CMS. Supported LAN in reaching a Top 5 national ranking with a 98.49 score at the 2025 KIP Awards.",
+                "An electronic governance system developed by LAN RI to streamline the management of institutional data and support digital transformation of internal governance processes.",
             stack: [
                 "Next.js",
                 "Nuxt.js",
@@ -303,14 +378,62 @@ export const database = {
                 "Shadcn UI",
                 "TanStack Query",
             ],
-            link: null,
+            link: "https://siniktala.lan.go.id/",
+        },
+        {
+            title: "JDIH LAN RI",
+            period: "2025",
+            status: "published",
+            summary:
+                "A legal information and documentation portal that provides access to LAN RI's legal regulations, institutional legal documents, and other legal resources related to public administration.",
+            stack: [
+                "Next.js",
+                "TypeScript",
+                "Strapi CMS",
+                "Tailwind CSS",
+                "Shadcn UI",
+                "TanStack Query",
+            ],
+            link: "https://jdih.lan.go.id/",
+        },
+        {
+            title: "PPID LAN RI",
+            period: "2024",
+            status: "published",
+            summary:
+                "A public information disclosure portal that helps citizens access institutional information and official public documents from LAN RI, supporting transparency and access to government information.",
+            stack: [
+                "Next.js",
+                "TypeScript",
+                "Strapi CMS",
+                "Tailwind CSS",
+                "Shadcn UI",
+                "TanStack Query",
+            ],
+            link: "https://ppid.lan.go.id/",
+        },
+        {
+            title: "LAN RI Website",
+            period: "2024",
+            status: "published",
+            summary:
+                "The official institutional website of LAN RI, presenting organizational information, news, publications, research, public services, and resources related to public administration and civil servant development.",
+            stack: [
+                "Next.js",
+                "TypeScript",
+                "Strapi CMS",
+                "Tailwind CSS",
+                "Shadcn UI",
+                "TanStack Query",
+            ],
+            link: "https://lan.go.id/",
         },
         {
             title: "SMART",
-            company: "Self-Employed",
             period: "2025",
+            status: "published",
             summary:
-                "Small Business Management & Accounting Resource Tool, a financial platform for UMKM covering budgeting, expense tracking, and financial reporting.",
+                "A financial management platform for micro, small, and medium-sized enterprises (MSMEs) that helps business owners organize budgets, track expenses, and generate financial reports for better financial visibility and decision-making.",
             stack: [
                 "Next.js",
                 "TypeScript",
@@ -320,66 +443,16 @@ export const database = {
             ],
             link: "https://be-smart.id/",
         },
+    ],
+    educations: [
         {
-            title: "G-ReflexPro & G-Workforce",
-            company: "PT Kencana Enterprise Global Projects",
-            period: "2024 – 2026",
-            summary: "Specialized platforms built for the mining industry.",
-            stack: [
-                "Next.js",
-                "TypeScript",
-                "Tailwind CSS",
-                "Shadcn UI",
-                "TanStack Query",
-                "Docker",
-            ],
-            link: null,
-        },
-        {
-            title: "Company Landing Pages",
-            company: "PT Kencana Enterprise Global Projects",
-            period: "2024 – 2026",
-            summary:
-                "Landing pages for K-EGP, Shaka Teknoindo Semesta, and Eterno Global Technologies.",
-            stack: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI"],
-            link: null,
-        },
-        {
-            title: "Chat Teramina",
-            company: "PT Metamorfosa Teknologi Utama",
-            period: null,
-            summary: "Responsive chat web application.",
-            stack: [
-                "React",
-                "Vite",
-                "TypeScript",
-                "Tailwind CSS",
-                "Ant Design",
-                "Redux Toolkit",
-            ],
-            link: null,
-        },
-        {
-            title: "Digiroom by Auto2000",
-            company: "PT Rahwana Teknologi Nusantara",
-            period: null,
-            summary: "Responsive web application built for Auto2000.",
-            stack: [
-                "React",
-                "Vite",
-                "Tailwind CSS",
-                "Material UI",
-                "React Query",
-            ],
-            link: null,
-        },
-        {
-            title: "Victoria Mobile",
-            company: "PT Infosys Solusi Terpadu",
-            period: "2020 – 2023",
-            summary: "Mobile banking application.",
-            stack: ["React Native", "Kony", "Android Studio"],
-            link: null,
+            institution: "Universitas Gadjah Mada",
+            degree: "Bachelor of Science",
+            field: "Mathematics",
+            location: "Yogyakarta, Indonesia",
+            startDate: "2014-09",
+            endDate: "2020-01",
+            gpa: null,
         },
     ],
-} as const;
+};

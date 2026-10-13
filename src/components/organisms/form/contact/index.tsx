@@ -340,7 +340,7 @@ export const ContactForm = () => {
                             disabled={isPending || !captchaToken}
                             className="group"
                         >
-                            Send Message
+                            {isPending ? "Sending..." : "Send Message"}
                             {isPending ? (
                                 <Loader className="animate-spin" />
                             ) : (

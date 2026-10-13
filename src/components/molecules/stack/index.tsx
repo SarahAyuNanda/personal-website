@@ -1,12 +1,12 @@
 import { BrandIcon, BrandIconSource } from "@/components/atoms/icon/brand";
 import { cn } from "@/lib/utils";
 
-export const SkillBadge = ({
-    skill,
+export const Stack = ({
+    stack,
     icon,
     className,
 }: {
-    skill: string;
+    stack: string;
     icon: BrandIconSource;
     className?: string;
 }) => {
@@ -18,7 +18,7 @@ export const SkillBadge = ({
             )}
         >
             <BrandIcon icon={icon} />
-            {skill}
+            {stack}
         </div>
     );
 };
