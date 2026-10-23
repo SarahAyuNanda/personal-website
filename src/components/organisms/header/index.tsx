@@ -1,7 +1,7 @@
 "use client";
 
 import { ThemeToggle } from "@/components/atoms";
-import { cn } from "@/lib/utils";
+import { cn } from "cn";
 import { useEffect, useState } from "react";
 
 export const Header = () => {
@@ -25,7 +25,7 @@ export const Header = () => {
             className={cn(
                 "inset-x-0 top-0 z-40 mx-auto flex w-full bg-transparent py-4 md:fixed",
                 {
-                    "bg-background/70 backdrop-blur-sm transition-all duration-150":
+                    "bg-background/25 backdrop-blur-xs transition-all duration-150":
                         scrolled,
                 }
             )}

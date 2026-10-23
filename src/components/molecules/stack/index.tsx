@@ -1,5 +1,5 @@
 import { BrandIcon, BrandIconSource } from "@/components/atoms/icon/brand";
-import { cn } from "@/lib/utils";
+import { cn } from "cn";
 
 export const Stack = ({
     stack,

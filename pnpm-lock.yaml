@@ -41,9 +41,6 @@ importers:
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
-      clsx:
-        specifier: ^2.1.1
-        version: 2.1.1
       cn:
         specifier: ^0.4.0
         version: 0.4.0
@@ -77,6 +74,9 @@ importers:
       react-scroll-to-top:
         specifier: ^3.1.0
         version: 3.1.0(react@19.2.4)
+      rough-notation:
+        specifier: ^0.5.1
+        version: 0.5.1
       shadcn:
         specifier: ^4.21.1
         version: 4.21.1(typescript@5.9.3)
@@ -86,9 +86,6 @@ importers:
       sonner:
         specifier: ^2.0.8
         version: 2.0.8(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
-      tailwind-merge:
-        specifier: ^3.7.0
-        version: 3.7.0
       tailwindcss-animated:
         specifier: ^2.1.0
         version: 2.1.0(tailwindcss@4.2.3)
@@ -3030,6 +3027,9 @@ packages:
     resolution: {integrity: sha512-g6QUff04oZpHs0eG5p83rFLhHeV00ug/Yf9nZM6fLeUrPguBTkTQOdpAWWspMh55TZfVQDPaN3NQJfbVRAxdIw==}
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
 
+  rough-notation@0.5.1:
+    resolution: {integrity: sha512-ITHofTzm13cWFVfoGsh/4c/k2Mg8geKgBCwex71UZLnNuw403tCRjYPQ68jSAd37DMbZIePXPjDgY0XdZi9HPw==}
+
   router@2.2.0:
     resolution: {integrity: sha512-nLTrUKm2UyiL7rlhapu/Zl45FwNgkZGaCpZbIHajDYgwlJCOzLSk+cIPAnsEqV955GjILJnKbdQC1nVPz+gAYQ==}
     engines: {node: '>= 18'}
@@ -3270,9 +3270,6 @@ packages:
     engines: {node: '>=10.0.0'}
     os: [darwin, linux, win32, freebsd, openbsd, netbsd, sunos, android]
     hasBin: true
-
-  tailwind-merge@3.7.0:
-    resolution: {integrity: sha512-XPPUyAc+cvspz3lHTcR/QgPfW2A0lv/xQNIjX3HGhLR+Nq2lHaLq5MtTesHn8GUr3W3DguT2KT5x3NVgRtYwmA==}
 
   tailwindcss-animated@2.1.0:
     resolution: {integrity: sha512-KUTVvcH2YQz0W8CT6QT3zz3UdqPmvLAja/KIDqY2lmvmurKPy3g+amIWenWjEaqoo3mjycuvGhYWFuegnSsCAQ==}
@@ -6440,6 +6437,8 @@ snapshots:
 
   reusify@1.1.0: {}
 
+  rough-notation@0.5.1: {}
+
   router@2.2.0:
     dependencies:
       debug: 4.4.3
@@ -6781,8 +6780,6 @@ snapshots:
   svg-arc-to-cubic-bezier@3.2.0: {}
 
   systeminformation@5.33.15: {}
-
-  tailwind-merge@3.7.0: {}
 
   tailwindcss-animated@2.1.0(tailwindcss@4.2.3):
     dependencies:

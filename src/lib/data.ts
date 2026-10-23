@@ -252,6 +252,33 @@ export const database = {
         //     ],
         // },
     ],
+    expertise: [
+        {
+            title: "Government & Public Information Platforms",
+            description:
+                "Transparent, accessible portals that help institutions publish official information and meet public disclosure standards.",
+        },
+        {
+            title: "Business Systems & ERP",
+            description:
+                "Role-based, data-heavy applications for real operations, from store checkout counters to government offices, mining sites, and finance teams.",
+        },
+        {
+            title: "Finance & Payment Interfaces",
+            description:
+                "Interfaces where accuracy matters most: banking apps, financial reports, and checkout flows with multiple payment methods.",
+        },
+        {
+            title: "Company Websites & Landing Pages",
+            description:
+                "Fast, polished websites that present a brand clearly and turn visitors into leads.",
+        },
+        {
+            title: "Front-End Foundations",
+            description:
+                "Reusable component systems, consistent design standards, and efficient data handling that keep products fast to build and easy to maintain.",
+        },
+    ],
     works: [
         {
             role: "Front-End Developer",
@@ -363,11 +390,48 @@ export const database = {
     ],
     projects: [
         {
+            title: "HOS ERP POS",
+            period: "2026",
+            status: "in-progress",
+            projectType: "private",
+            summary:
+                "A point-of-sale system for House of Shopaholic, a fashion retailer, that replaces manual discount calculation and vendor-dependent voids with automatic promotions, on-the-spot approvals by store leads, and real-time stock visibility per store, so staff can serve customers faster with fewer errors.",
+            stack: [
+                "Typescript",
+                "Vue 3",
+                "Vite",
+                "Pinia",
+                "Tailwind CSS",
+                "Shadcn Vue",
+                "Vue Router",
+            ],
+            link: null,
+            image: null,
+        },
+        {
+            title: "SMART - Small Business Management & Accounting Resource Tool",
+            period: "2025",
+            status: "live",
+            projectType: "public",
+            summary:
+                "A financial management platform for micro, small, and medium enterprises (MSMEs) that replaces handwritten notes and scattered spreadsheets with simple budgeting, expense tracking, and visual reports, so business owners can clearly see where their money goes and make better decisions.",
+            stack: [
+                "Next.js",
+                "TypeScript",
+                "Tailwind CSS",
+                "Shadcn UI",
+                "TanStack Query",
+            ],
+            link: "https://be-smart.id/",
+            image: "/project/smart-preview.png",
+        },
+        {
             title: "Siniktala LAN RI",
             period: "2025",
             status: "under-maintenance",
+            projectType: "private",
             summary:
-                "An electronic governance system developed by LAN RI to streamline the management of institutional data and support digital transformation of internal governance processes.",
+                "An e-governance system for LAN RI that revamps an outdated legacy platform into a modern, centralized, role-based workspace for managing institutional data, so internal governance processes run faster, stay consistent, and are easier to monitor.",
             stack: [
                 "Next.js",
                 "Nuxt.js",
@@ -380,13 +444,15 @@ export const database = {
             ],
             // link: "https://siniktala.lan.go.id/",
             link: "https://siniktaladev.lan.go.id/",
+            image: "/project/siniktala-preview.png",
         },
         {
             title: "JDIH LAN RI",
             period: "2025",
             status: "live",
+            projectType: "public",
             summary:
-                "A legal information and documentation portal that provides access to LAN RI's legal regulations, institutional legal documents, and other legal resources related to public administration.",
+                "A legal documentation portal that replaces hard-to-find regulation files with a structured, searchable library of LAN RI's regulations and legal documents, so civil servants and the public can quickly find the right legal reference.",
             stack: [
                 "Next.js",
                 "TypeScript",
@@ -396,13 +462,15 @@ export const database = {
                 "TanStack Query",
             ],
             link: "https://jdih.lan.go.id/",
+            image: "/project/jdih-preview.png",
         },
         {
             title: "PPID LAN RI",
             period: "2024",
             status: "live",
+            projectType: "public",
             summary:
-                "A public information disclosure portal that helps citizens access institutional information and official public documents from LAN RI, supporting transparency and access to government information.",
+                "A public information disclosure portal that replaces slow, request-based access to government information with organized, openly available public documents, so citizens can get LAN RI's official information on their own and the institution can meet its transparency obligations.",
             stack: [
                 "Next.js",
                 "TypeScript",
@@ -412,13 +480,15 @@ export const database = {
                 "TanStack Query",
             ],
             link: "https://ppid.lan.go.id/",
+            image: "/project/ppid-preview.png",
         },
         {
             title: "LAN RI",
             period: "2024",
             status: "live",
+            projectType: "public",
             summary:
-                "The official institutional website of LAN RI, presenting organizational information, news, publications, research, public services, and resources related to public administration and civil servant development.",
+                "The official website of LAN RI that brings scattered news, publications, research, and public services into one portal powered by a central CMS, so the team can publish updates without developer help and the public can easily find what they need. It contributed to LAN's Top 5 national ranking at the 2025 KIP Awards.",
             stack: [
                 "Next.js",
                 "TypeScript",
@@ -428,21 +498,7 @@ export const database = {
                 "TanStack Query",
             ],
             link: "https://lan.go.id/",
-        },
-        {
-            title: "SMART",
-            period: "2025",
-            status: "live",
-            summary:
-                "A financial management platform for micro, small, and medium-sized enterprises (MSMEs) that helps business owners organize budgets, track expenses, and visualize financial reports for better financial visibility and decision-making.",
-            stack: [
-                "Next.js",
-                "TypeScript",
-                "Tailwind CSS",
-                "Shadcn UI",
-                "TanStack Query",
-            ],
-            link: "https://be-smart.id/",
+            image: "/project/lan-preview.png",
         },
     ],
     educations: [

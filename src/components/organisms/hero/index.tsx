@@ -12,10 +12,16 @@ import { Download, Loader } from "lucide-react";
 
 export const Hero = () => {
     return (
-        <section className="relative flex h-dvh w-full flex-col justify-between md:justify-center">
-            <div className="mx-auto flex w-full max-w-7xl flex-1 flex-col items-center justify-center gap-6 px-5 lg:px-0">
+        <section
+            id="hero"
+            className="relative flex h-dvh w-full flex-col justify-between md:justify-center"
+        >
+            <div className="mx-auto flex w-full max-w-7xl flex-1 flex-col items-center justify-center gap-6 px-5 md:px-8 lg:px-0">
                 <div className="flex items-center gap-3">
-                    <span className="border-muted h-3 w-3 animate-pulse rounded-full border-2 bg-green-600" />
+                    <span className="relative flex h-3 w-3">
+                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75" />
+                        <span className="border-muted relative inline-flex h-3 w-3 rounded-full border-2 bg-green-600" />
+                    </span>
                     <p className="text-xs font-medium tracking-wide uppercase">
                         Available for new opportunities
                     </p>
