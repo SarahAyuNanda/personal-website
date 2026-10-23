@@ -12,10 +12,11 @@ import Image from "next/image";
 type Project = (typeof database.projects)[number];
 
 const panelStyles = [
-    "bg-primary",
-    "bg-tertiary",
-    "bg-secondary",
-    "bg-accent dark:bg-accent/90",
+    // "bg-primary",
+    // "bg-tertiary",
+    // "bg-secondary",
+    // "bg-accent dark:bg-accent/90",
+    "bg-background dark:bg-card",
 ];
 
 const statusStyles: Record<string, { label: string; dot: string }> = {
@@ -38,13 +39,12 @@ const ProjectVisual = ({
     return (
         <div
             className={cn(
-                "relative h-full min-h-72 overflow-hidden rounded-3xl md:min-h-96",
+                "relative flex h-full min-h-72 items-center justify-center overflow-hidden rounded-3xl p-6 md:min-h-96 md:p-10",
                 panelStyles[index % panelStyles.length]
             )}
         >
-            <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.18)_1px,transparent_1.5px)] bg-size-[18px_18px]" />
-            <div className="bg-background text-foreground absolute top-[14%] -bottom-6 left-[10%] flex w-[115%] flex-col overflow-hidden rounded-xl shadow-2xl transition-transform duration-500 group-hover:-translate-y-2">
-                <div className="bg-muted flex shrink-0 items-center gap-2 py-3 pr-[28%] pl-4">
+            <div className="bg-background text-foreground relative flex w-full max-w-xl flex-col overflow-hidden rounded-xl shadow-2xl transition-transform duration-500 group-hover:-translate-y-2 group-hover:-rotate-1">
+                <div className="bg-muted flex shrink-0 items-center gap-2 px-4 py-3">
                     <span className="size-2.5 rounded-full bg-red-400" />
                     <span className="size-2.5 rounded-full bg-amber-400" />
                     <span className="size-2.5 rounded-full bg-green-400" />
@@ -53,16 +53,17 @@ const ProjectVisual = ({
                     </span>
                 </div>
                 {project.image ? (
-                    <div className="relative flex-1">
+                    <div className="relative aspect-3/2">
                         <Image
                             src={project.image}
                             alt={project.title}
                             fill
-                            className="object-cover object-top-left"
+                            sizes="(min-width: 1024px) 576px, 90vw"
+                            className="object-fill object-center"
                         />
                     </div>
                 ) : (
-                    <div className="flex flex-col gap-3 p-6 pr-[28%] md:p-8 md:pr-[28%]">
+                    <div className="flex flex-col gap-3 p-6 md:p-8">
                         <p className="font-fuzzy text-primary text-2xl font-bold md:text-3xl">
                             {project.title}
                         </p>
@@ -91,7 +92,7 @@ export const Projects = () => {
                 <div className="flex items-center gap-3">
                     <p className="text-xs font-medium tracking-wide uppercase">
                         <Highlighter
-                            action="underline"
+                            action="highlight"
                             color="rgba(192, 57, 43, 0.25)"
                             isView
                         >
@@ -184,7 +185,7 @@ export const Projects = () => {
                     return (
                         <article
                             key={project.title}
-                            className="group bg-background/80 dark:bg-card/80 grid grid-cols-1 overflow-hidden rounded-3xl shadow-[0_24px_60px_-20px_rgba(15,23,42,0.18)] backdrop-blur-sm transition-shadow duration-300 hover:shadow-[0_32px_70px_-20px_rgba(15,23,42,0.28)] lg:grid-cols-2 dark:shadow-[0_24px_60px_-20px_rgba(0,0,0,0.6)] dark:hover:shadow-[0_32px_70px_-20px_rgba(0,0,0,0.75)]"
+                            className="group bg-background dark:bg-card grid grid-cols-1 overflow-hidden rounded-3xl shadow-[0_24px_60px_-20px_rgba(15,23,42,0.18)] backdrop-blur-sm transition-shadow duration-300 lg:grid-cols-2 dark:shadow-[0_24px_60px_-20px_rgba(0,0,0,0.6)]"
                         >
                             <div
                                 className={cn({

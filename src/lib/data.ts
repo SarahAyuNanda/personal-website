@@ -409,7 +409,7 @@ export const database = {
             image: null,
         },
         {
-            title: "SMART",
+            title: "SMART - Small Business Management & Accounting Resource Tool",
             period: "2025",
             status: "live",
             projectType: "public",
@@ -423,7 +423,7 @@ export const database = {
                 "TanStack Query",
             ],
             link: "https://be-smart.id/",
-            image: null,
+            image: "/project/smart-preview.png",
         },
         {
             title: "Siniktala LAN RI",
@@ -444,7 +444,7 @@ export const database = {
             ],
             // link: "https://siniktala.lan.go.id/",
             link: "https://siniktaladev.lan.go.id/",
-            image: null,
+            image: "/project/siniktala-preview.png",
         },
         {
             title: "JDIH LAN RI",
@@ -462,7 +462,7 @@ export const database = {
                 "TanStack Query",
             ],
             link: "https://jdih.lan.go.id/",
-            image: null,
+            image: "/project/jdih-preview.png",
         },
         {
             title: "PPID LAN RI",
@@ -480,7 +480,7 @@ export const database = {
                 "TanStack Query",
             ],
             link: "https://ppid.lan.go.id/",
-            image: null,
+            image: "/project/ppid-preview.png",
         },
         {
             title: "LAN RI",
@@ -498,7 +498,7 @@ export const database = {
                 "TanStack Query",
             ],
             link: "https://lan.go.id/",
-            image: null,
+            image: "/project/lan-preview.png",
         },
     ],
     educations: [

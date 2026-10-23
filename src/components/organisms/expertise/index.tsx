@@ -1,4 +1,5 @@
 import { Highlighter } from "@/components/ui/highlighter";
+import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { database } from "@/lib/data";
 import { yearsSinceStart } from "@/lib/date";
 import Image from "next/image";
@@ -13,7 +14,7 @@ export const Expertise = () => {
                 <div className="flex items-center gap-3">
                     <p className="text-xs font-medium tracking-wide uppercase">
                         <Highlighter
-                            action="underline"
+                            action="highlight"
                             color="rgba(192, 57, 43, 0.25)"
                             isView
                         >
@@ -52,22 +53,22 @@ export const Expertise = () => {
                             />
                         </div>
 
-                        <div className="bg-background/90 absolute -bottom-4 left-1/2 flex -translate-x-1/2 items-center gap-2 rounded-full px-4 py-2 text-xs font-medium whitespace-nowrap shadow-xl backdrop-blur-sm lg:top-[30%] lg:bottom-auto lg:-left-10 lg:translate-x-0">
+                        <ShimmerButton className="absolute -bottom-4 left-1/2 flex -translate-x-1/2 cursor-default items-center gap-2 rounded-full px-4 py-2 text-xs font-medium whitespace-nowrap shadow-xl backdrop-blur-sm lg:top-[30%] lg:bottom-auto lg:-left-10 lg:translate-x-0">
                             <span className="relative flex size-2">
                                 <span className="absolute inline-flex size-full rounded-full bg-green-500 opacity-75 motion-safe:animate-ping" />
                                 <span className="relative inline-flex size-2 rounded-full bg-green-600" />
                             </span>
                             Open to new projects
-                        </div>
+                        </ShimmerButton>
 
-                        <div className="bg-background/90 motion-safe:animate-float absolute -right-6 bottom-12 hidden items-center gap-3 rounded-full px-4 py-2 shadow-xl backdrop-blur-sm lg:-right-8 lg:flex">
-                            <span className="font-fuzzy text-primary text-xl font-bold">
+                        <ShimmerButton className="motion-safe:animate-float absolute -right-6 bottom-12 hidden cursor-default items-center gap-3 rounded-full px-4 py-2 shadow-xl backdrop-blur-sm lg:-right-8 lg:flex">
+                            <span className="font-fuzzy text-tertiary text-xl font-bold">
                                 {yearsSinceStart()}+
                             </span>
                             <span className="text-xs leading-1 font-medium">
                                 years experience
                             </span>
-                        </div>
+                        </ShimmerButton>
 
                         <p className="absolute top-full left-1/2 mt-7 flex -translate-x-1/2 items-baseline gap-1.5 text-xs font-medium whitespace-nowrap lg:hidden">
                             <span className="font-fuzzy text-primary text-xl font-bold">
