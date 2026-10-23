@@ -12,3 +12,5 @@ export const yearsSinceStart = () => {
     const currentDate = new Date();
     return currentDate.getFullYear() - pastDate.getFullYear();
 };
+
+export const currentYear = () => new Date().getFullYear();

@@ -2,13 +2,13 @@
 
 import { ErrorBoundaryPage } from "@/components/templates";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { cn } from "@/lib/utils";
 import { ChevronUp } from "lucide-react";
 import { ThemeProvider } from "next-themes";
 import { ReactNode } from "react";
 import ScrollToTop from "react-scroll-to-top";
 import { Toaster } from "sonner";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { cn } from "cn";
 
 export const RootTemplate = ({ children }: { children: ReactNode }) => {
     const queryClient = new QueryClient();

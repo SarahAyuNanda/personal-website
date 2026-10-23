@@ -15,12 +15,19 @@ export const Project = ({
             <View style={style.infoRow}>
                 <View style={style.titleGroup}>
                     <Text style={style.title}>
-                        <Link style={style.title} src={link}>
-                            {title}
-                        </Link>
+                        {link ? (
+                            <Link style={style.title} src={link}>
+                                {title}
+                            </Link>
+                        ) : (
+                            title
+                        )}
                     </Text>
                     {status === "under-maintenance" && (
                         <Text style={style.badge}>Under Maintenance</Text>
+                    )}
+                    {status === "in-progress" && (
+                        <Text style={style.badge}>In Progress</Text>
                     )}
                 </View>
                 <Text style={style.smallText}>{period}</Text>

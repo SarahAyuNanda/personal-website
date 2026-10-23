@@ -40,11 +40,11 @@ import {
 } from "@/components/ui/tooltip";
 import { SECURE } from "@/lib/constants";
 import { database } from "@/lib/data";
-import { cn } from "@/lib/utils";
 import { useSendEmail } from "@/services";
 import { useGSAP } from "@gsap/react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Turnstile, TurnstileInstance } from "@marsidev/react-turnstile";
+import { cn } from "cn";
 import gsap from "gsap";
 import { Flip } from "gsap/Flip";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
